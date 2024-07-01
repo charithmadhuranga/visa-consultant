@@ -432,7 +432,8 @@
                   <strong>Tapro Visa Consultancy</strong><br />
                   No 79,Kohilawatha,Wellampitiya,<br />
                   Sri Lanka<br />
-                  <!-- <abbr title="Phone">P:</abbr> (123) 456-7890 -->
+                  <abbr title="Phone">Phone No:</abbr> +94 77 225 8655<br/>
+                   <abbr title="Email">Email :</abbr> taproconsultancy@gmail.com
                 </address>
               </div>
             </div>
@@ -509,5 +510,42 @@
     <script type="text/javascript" src="js/jquery.slitslider.js"></script>
     <script type="text/javascript" src="js/slitslider-custom.js"></script>
     <script src="js/custom-scripts.js"></script>
+    <script>
+                var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?69833';
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = url;
+                var options = {
+                "enabled":true,
+                "chatButtonSetting":{
+                    "backgroundColor":"#00e785",
+                    "ctaText":"Chat with us",
+                    "borderRadius":"25",
+                    "marginLeft": "0",
+                    "marginRight": "20",
+                    "marginBottom": "20",
+                    "ctaIconWATI":false,
+                    "position":"right"
+                },
+                "brandSetting":{
+                    "brandName":"Tapro Visa",
+                    "brandSubTitle":"undefined",
+                    "brandImg":"https://www.taprovisa.com/images/logo.png",
+                    "welcomeText":"Hi there!\nHow can I help you?",
+                    "messageText":"Hello, %0A I have a question about {{page_link}}",
+                    "backgroundColor":"#00e785",
+                    "ctaText":"Chat with us",
+                    "borderRadius":"25",
+                    "autoShow":true,
+                    "phoneNumber":"94772258655"
+                }
+                };
+                s.onload = function() {
+                    CreateWhatsappChatWidget(options);
+                };
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            </script>
   </body>
 </html>
